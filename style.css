@@ -1,0 +1,63 @@
+/*Insere uma nova fonte no projeto*/
+@font-face { 
+ 
+font-family: 'Gaspar Regular';
+ 
+src: url('assets/fonts/Gaspar Regular.otf');
+ 
+}
+
+/*Utiliza a fonte em todo o Body*/
+body {
+	font-family: 'Gaspar Regular', 'sans-serif';
+}
+
+/*Altera o fundo da Navbar*/
+.header .navbar-custom {
+	background-color: #09365b;
+}
+
+/*Altera a cor da Logo da Navbar*/
+.navbar-dark .navbar-brand {
+	color: #d4dbe3;
+}
+
+/*Tira o padding do Jumbotron para a imagem ocupar ele todo*/
+.jumbotron-custom {
+	padding-top: 0;
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 0;
+}
+
+/*Tira a margem inferior do h2 e dos h4 dentro da .navbar-brand*/
+.navbar-brand h2, h4 {
+	margin-bottom: 0;
+}
+
+/*Adiciona um padding do tamanho da navbar(64px) ao topo
+ *docarousel
+ */
+.carousel-custom {
+	padding-top: 64px;
+}
+
+/*Altera a min-width para 300px, para que a imagem continue
+ *aparecendo mesmo em telas menores, retira o padding de
+ *baixo
+ */
+@media (min-width: 300px){
+	.d-md-block-custom {
+		padding-bottom: 0;
+	    display: block!important;
+	}
+}
+
+/*Pega 75% do espaço da div para a logo e centraliza
+ *horizontalmente
+ */
+.w-custom {
+	width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
