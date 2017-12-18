@@ -35,11 +35,12 @@ body {
 	margin-bottom: 0;
 }
 
-/*Adiciona um padding do tamanho da navbar(64px) ao topo
- *docarousel
+/*Muda a posição do carousel para absoluta iniciando logo
+ *após o tamanho da navbar(64px)
  */
 .carousel-custom {
-	padding-top: 64px;
+	position: absolute;
+    top: 64px;
 }
 
 /*Altera a min-width para 300px, para que a imagem continue

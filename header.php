@@ -9,32 +9,25 @@
 <div class="header">
 	<nav class="navbar fixed-top navbar-expand-lg navbar-dark navbar-custom">
 		<div class="container">
-	      <a class="navbar-brand" href="#"><h2>ANCORA</h2></a>
+	      <a class="navbar-brand" href="#"><h2><?php bloginfo( 'name' ); ?></h2></a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="navbar-toggler-icon"></span>
 	      </button>
 
-	      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-	        <ul class="navbar-nav mr-auto">
-	          <li class="nav-item">
-	            <a class="nav-link nav-link-custom" href="#"><h4>Sobre</h4></a>
-	          </li>
-	          <li class="nav-item">
-	            <a class="nav-link nav-link-custom" href="#"><h4>Produtos</h4></a>
-	          </li>
-	          <li class="nav-item">
-	            <a class="nav-link nav-link-custom" href="#"><h4>Fornecedores</h4></a>
-	          </li>
-	          <li class="nav-item">
-	            <a class="nav-link nav-link-custom" href="#"><h4>Contato</h4></a>
-	          </li>
-	        </ul>
-	        <span class="navbar-nav">
-	        	<li class="nav-item">
-	        		<a class="nav-link nav-link-custom" href="#"><h4>Livro de Receitas</h4></a>
-	        	</li>
-	        </span>
-	      </div>
+	      <?php require_once('assets/includes/bs4navwalker.php');
+	      wp_nav_menu([
+				     'menu'            => 'top',
+				     'theme_location'  => 'primary', // criado na register_nav_menus do functions.php
+				     'container'       => 'div',
+				     'container_id'    => 'navbarSupportedContent',
+				     'container_class' => 'collapse navbar-collapse',
+				     'menu_id'         => false,
+				     'menu_class'      => 'navbar-nav mr-auto',
+				     'depth'           => 2,
+				     'fallback_cb'     => 'bs4navwalker::fallback',
+				     'walker'          => new bs4navwalker()
+				   ]);
+		  ?>
       	</div>
     </nav>
 </div>

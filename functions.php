@@ -11,7 +11,13 @@ add_action('after_setup_theme','add_suport_theme');
 /**************************************
  * Registro Menu Personalizado
  **************************************/
-add_theme_support('menus');
+function add_menu_support() {
+    add_theme_support( 'menus' );
+}
+add_action( 'after_setup_theme', 'add_menu_support' );
+register_nav_menus( array(
+    'primary' => __( 'Menu Navbar', 'top' ),
+) );
 
 /**************************************
  *  SCRIPTS / CSS
