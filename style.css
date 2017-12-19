@@ -35,21 +35,21 @@ body {
 	margin-bottom: 0;
 }
 
-/*Muda a posição do carousel para absoluta iniciando logo
- *após o tamanho da navbar(64px)
+/*Altera o padding do carousel iniciando-o logo
+ *após a navbar
  */
 .carousel-custom {
-	position: absolute;
-    top: 64px;
+    padding-top: 64px;
 }
 
 /*Altera a min-width para 300px, para que a imagem continue
  *aparecendo mesmo em telas menores, retira o padding de
- *baixo
+ *baixo e coloca a posição bottom em 10px
  */
 @media (min-width: 300px){
 	.d-md-block-custom {
 		padding-bottom: 0;
+		bottom: 10px;
 	    display: block!important;
 	}
 }
@@ -61,4 +61,8 @@ body {
 	width: 75%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.produto-imagem img {
+	border-radius: 50%;
 }
