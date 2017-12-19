@@ -15,20 +15,28 @@
 
 <div class="produtos">
 	<div class="container">
+		<h2 class="title-produtos">PRODUTOS</h2>
 		<div class="row">
-			
-			<div class="col-lg-4 col-sm-6">
-				<div class="row">
-				<div class="col-4 produto-imagem">
-				    <img class="top img-fluid" src="<?php bloginfo('template_directory');?>/assets/images/slider-01.jpg" alt=""/>
+			<?php 
+				$args = array('post_type'=>'produtos', 'showposts'=>-1);
+				$meus_produtos = get_posts( $args );
+				if($meus_produtos) : foreach($meus_produtos as $post) : setup_postdata( $post );
+			?>
+				<div class="col-lg-3 col-md-4 col-sm-6 produto">
+					<div class="row">
+					<div class="col-4">
+						<?php the_post_thumbnail(false, array('class'=>'img-fluid rounded-circle')); ?>
+					</div>
+					<div class="col-8 info">
+					    <h3><?php the_title(); ?></h3>
+					    <?php the_excerpt(); ?>
+					</div>
+					</div>
 				</div>
-				<div class="col-8 produto-info">
-				    <h2 class="descricao">Marlin Azul</h2>
-				    <p class="preco">R$ 100,00/kg</p>
-				</div>
-				</div>
-			</div>
-			
+			<?php
+		    	endforeach;
+		    	endif;
+	     	?>
 		</div>
 	</div>
 </div>

@@ -63,7 +63,7 @@ function register_post_produtos() {
     'query_var' => true,
     'rewrite' => true,
     'has_archive' => true,
-    'menu_icon' => 'dashicons-pressthis',
+    'menu_icon' => 'dashicons-cart',
     'capability_type' => 'post',
     'hierarchical' => false,
     'rewrite' => array('slug'=>'produtos'), 
