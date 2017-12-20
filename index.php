@@ -13,6 +13,34 @@
 	</div>
 </div>
 
+<div class="sobre">
+	<div class="container">
+		<div class="row">
+			<?php 
+				$args = array('post_type'=>'page', 'pagename'=>'sobre');
+				$meu_sobre = get_posts( $args );
+				if($meu_sobre) : foreach($meu_sobre as $post) : setup_postdata( $post );
+			?>
+				<div class="col-md-6 col-lg-6 pai">
+					<div class="filho">
+						<h2 class="title-sobre"><?php the_title(); ?></h2>
+						<?php the_content(); ?>
+					</div>
+				</div>
+				
+				<div class="col-md-6 col-lg-6 pai">
+					<div class="filho">
+						<?php the_post_thumbnail(false, array('class'=>'img-fluid')); ?>
+					</div>
+				</div>
+			<?php
+		    	endforeach;
+		    	endif;
+	     	?>
+		</div>
+	</div>
+</div>
+
 <div class="produtos">
 	<div class="container">
 		<h2 class="title-produtos">PRODUTOS</h2>
