@@ -74,3 +74,43 @@ function register_post_produtos() {
   register_post_type( 'produtos' , $args );
   flush_rewrite_rules();
 }
+
+/**************************************
+ * Registro Custom Post type Clientes
+ **************************************/
+add_action('init', 'register_post_clientes');
+function register_post_clientes() { 
+  $labels = array(
+    'name' => _x('Clientes', 'post type general name'),
+    'singular_name' => _x('Ciente', 'post type singular name'),
+    'add_new' => _x('Adicionar Cliente', 'Novo Cliente'),
+    'add_new_item' => __('Novo Cliente'),
+    'edit_item' => __('Editar Cliente'),
+    'new_item' => __('Novo Cliente'),
+    'view_item' => __('Ver Cliente'),
+    'search_items' => __('Procurar Clientes'),
+    'not_found' =>  __('Nenhum registro encontrado'),
+    'not_found_in_trash' => __('Nenhum registro encontrado na lixeira'),
+    'parent_item_colon' => '',
+    'menu_name' => 'Clientes'
+  );
+
+  $args = array(
+    'labels' => $labels,
+    'public' => true,
+    'public_queryable' => true,
+    'show_ui' => true,           
+    'query_var' => true,
+    'rewrite' => true,
+    'has_archive' => true,
+    'menu_icon' => 'dashicons-store',
+    'capability_type' => 'post',
+    'hierarchical' => false,
+    'rewrite' => array('slug'=>'clientes'), 
+    'menu_position' => 5,
+    'supports' => array('title','thumbnail'),
+  );
+ 
+  register_post_type( 'clientes' , $args );
+  flush_rewrite_rules();
+}

@@ -13,9 +13,11 @@ body {
 	font-family: 'Gaspar Regular', 'sans-serif';
 }
 
-/*Altera o fundo da Navbar*/
+/*Altera o fundo da Navbar e coloca sombra*/
 .header .navbar-custom {
 	background-color: #09365b;
+	-webkit-filter: drop-shadow(2px 2px 2px #222);
+  	filter: drop-shadow(2px 2px 2px #222);
 }
 
 /*Altera a cor da Logo da Navbar*/
@@ -62,7 +64,7 @@ body {
     display: block!important;
 }*/
 
-/*Pega 70% do espaço da div para a logo e centraliza
+/*Pega 70% do espaço da div para a logo e a centraliza
  *horizontalmente
  */
 .w-custom {
@@ -70,6 +72,12 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 40px 0;
+}
+
+/*Sombra na logo*/
+.banner img {
+	-webkit-filter: drop-shadow(5px 5px 5px #222);
+  	filter: drop-shadow(5px 5px 5px #222);
 }
 
 /*Estilo da seção PRODUTOS*/
@@ -111,6 +119,10 @@ body {
 .produto .info h3 {
 	margin-bottom: 0;
 }
+.produto img{
+	-webkit-filter: drop-shadow(2px 2px 5px #d4dbe3);
+  	filter: drop-shadow(2px 2px 5px #d4dbe3);
+}
 .pai-produto {
   display: flex;
   justify-content: left;
@@ -138,12 +150,14 @@ body {
 	margin-top: 5px;
 	margin-bottom: 0;
 	font-family: sans-serif;
-	text-align: justify;
+	text-align: center;
 }
 .sobre img {
 	padding: 10px 0;
 	height: auto;
 	width: auto;
+	-webkit-filter: drop-shadow(2px 2px 5px #09365b);
+  	filter: drop-shadow(2px 2px 5px #09365b);
 }
 .pai {
   display: flex;
@@ -151,4 +165,26 @@ body {
 }
 .filho {
   align-self: center;
+}
+
+/*Estilo da seção CLIENTES*/
+.clientes .container {
+	padding: 20px 40px;
+	background-color: #d4dbe3;
+}
+.title-clientes {
+	text-align: center;
+	padding-bottom: 10px;
+	color: #09365b;
+	border-bottom: 4px dashed #961811;
+	opacity: 1;
+}
+.clientes img {
+	max-height: 250px;
+	padding: 20px 40px;
+	height: auto;
+	width: auto;
+	opacity: .6;
+	-webkit-filter: drop-shadow(3px 3px 5px #222);
+  	filter: drop-shadow(3px 3px 5px #222);
 }

@@ -12,11 +12,16 @@
 	  </div>
 	</div>
 </div>-->
+
+<!-- Início BANNER -->
 <div class="banner pai">
 	<div class="filho">
 		<img class="img-fluid d-block w-custom" src="<?php bloginfo('template_directory');?>/assets/images/logo.png" alt="Logo da Empresa">
 	</div>
 </div>
+<!-- Fim BANNER -->
+
+<!-- Início SOBRE -->
 <div class="sobre">
 	<div class="container">
 		<div class="row">
@@ -44,7 +49,9 @@
 		</div>
 	</div>
 </div>
+<!-- Fim SOBRE -->
 
+<!-- Início PRODUTOS -->
 <div class="produtos">
 	<div class="container">
 		<h2 class="title-produtos">PRODUTOS</h2>
@@ -56,17 +63,17 @@
 			?>
 				<div class="col-lg-3 col-md-4 col-sm-6 produto">
 					<div class="row">
-					<div class="col-4 image pai-produto">
-						<div class="filho-produto">
-						<?php the_post_thumbnail(false, array('class'=>'img-fluid rounded-circle')); ?>
+						<div class="col-4 image pai-produto">
+							<div class="filho-produto">
+							<?php the_post_thumbnail(false, array('class'=>'img-fluid rounded-circle')); ?>
+							</div>
 						</div>
-					</div>
-					<div class="col-8 info pai-produto">
-						<div class="filho-produto">
-					    <h3><?php the_title(); ?></h3>
-					    <?php the_excerpt(); ?>
-					    </div>
-					</div>
+						<div class="col-8 info pai-produto">
+							<div class="filho-produto">
+						    <h3><?php the_title(); ?></h3>
+						    <?php the_excerpt(); ?>
+						    </div>
+						</div>
 					</div>
 				</div>
 			<?php
@@ -76,6 +83,29 @@
 		</div>
 	</div>
 </div>
+<!-- Fim PRODUTOS -->
 
-
+<!-- Início CLIENTES -->
+<div class="clientes">
+	<div class="container">
+		<h2 class="title-clientes">CLIENTES</h2>
+		<div class="row">
+			<?php 
+				$args = array('post_type'=>'clientes', 'showposts'=>-1);
+				$meus_clientes = get_posts( $args );
+				if($meus_clientes) : foreach($meus_clientes as $post) : setup_postdata( $post );
+			?>
+				<div class="col-lg-4 col-sm-6 pai">
+					<div class="filho">
+						<?php the_post_thumbnail(false, array('class'=>'img-fluid')); ?>
+					</div>
+				</div>
+			<?php
+		    	endforeach;
+		    	endif;
+	     	?>
+		</div>
+	</div>
+</div>
+<!-- Fim CLIENTES -->
 <?php get_footer(); ?>
