@@ -1,18 +1,22 @@
 <?php get_header(); ?>
 
-<div class="slider">
+<!--<div class="slider">
 	<div id="carouselExampleSlidesOnly" class="carousel carousel-custom">
 	  <div class="carousel-inner">
-	    <div class="carousel-item active">
+	    <div class="carousel-item active pai">
 	      <img class="d-block w-100" src="<?php bloginfo('template_directory');?>/assets/images/slider-01.jpg" alt="Backgroud Docas">
-		  <div class="carousel-caption d-md-block-custom">
+		  <div class="carousel-caption filho">
 		    <img class="d-block w-custom" src="<?php bloginfo('template_directory');?>/assets/images/logo.png" alt="Logo da Empresa">
 		  </div>
 	    </div>
 	  </div>
 	</div>
+</div>-->
+<div class="banner pai">
+	<div class="filho">
+		<img class="img-fluid d-block w-custom" src="<?php bloginfo('template_directory');?>/assets/images/logo.png" alt="Logo da Empresa">
+	</div>
 </div>
-
 <div class="sobre">
 	<div class="container">
 		<div class="row">
@@ -52,12 +56,16 @@
 			?>
 				<div class="col-lg-3 col-md-4 col-sm-6 produto">
 					<div class="row">
-					<div class="col-4">
+					<div class="col-4 image pai-produto">
+						<div class="filho-produto">
 						<?php the_post_thumbnail(false, array('class'=>'img-fluid rounded-circle')); ?>
+						</div>
 					</div>
-					<div class="col-8 info">
+					<div class="col-8 info pai-produto">
+						<div class="filho-produto">
 					    <h3><?php the_title(); ?></h3>
 					    <?php the_excerpt(); ?>
+					    </div>
 					</div>
 					</div>
 				</div>

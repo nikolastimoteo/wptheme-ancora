@@ -23,13 +23,22 @@ body {
 	color: #d4dbe3;
 }
 
+/*Dimensionamento do banner*/
+.banner{
+	margin-top: 64px;
+	max-height: 100vh;
+	background: url(assets/images/banner.jpg);
+	background-size: cover;
+	background-position: center; 
+}
+
 /*Tira o padding do Jumbotron para a imagem ocupar ele todo*/
-.jumbotron-custom {
+/*.jumbotron-custom {
 	padding-top: 0;
 	padding-left: 0;
 	padding-right: 0;
 	padding-bottom: 0;
-}
+}*/
 
 /*Tira a margem inferior do h2 e dos h4 dentro da .navbar-brand*/
 .navbar-brand h2, h4 {
@@ -39,33 +48,32 @@ body {
 /*Altera o padding do carousel iniciando-o logo
  *após a navbar
  */
-.carousel-custom {
+/*.carousel-custom {
     padding-top: 64px;
-}
+}*/
 
-/*Altera a min-width para 300px, para que a imagem continue
- *aparecendo mesmo em telas menores, retira o padding de
- *baixo e coloca a posição bottom em 10px
+/*Para que a imagem continue aparecendo mesmo em telas
+ *menores, retira o padding de baixo e coloca a posição
+ *bottom em 15px
  */
-@media (min-width: 300px){
-	.d-md-block-custom {
-		padding-bottom: 0;
-		bottom: 10px;
-	    display: block!important;
-	}
-}
+/*.d-md-block-custom {
+	padding-bottom: 0;
+	bottom: 15px;
+    display: block!important;
+}*/
 
-/*Pega 75% do espaço da div para a logo e centraliza
+/*Pega 70% do espaço da div para a logo e centraliza
  *horizontalmente
  */
 .w-custom {
-	width: 75%;
+	width: 70%;
     margin-left: auto;
     margin-right: auto;
+    padding: 40px 0;
 }
 
 /*Estilo da seção PRODUTOS*/
-.title-produtos{
+.title-produtos {
 	text-align: center;
 	padding-bottom: 10px;
 	color: #d4dbe3;
@@ -87,6 +95,12 @@ body {
 	padding-top: 15px;
 	padding-bottom: 15px;
 }
+.produto .info {
+	padding-left: 10px;
+}
+.produto .image {
+	padding-right: 10px;
+}
 .produto .info p {
 	color: #d78442;
 	font-size: 1.2em;
@@ -97,37 +111,20 @@ body {
 .produto .info h3 {
 	margin-bottom: 0;
 }
-@media (max-width: 1200px)  {
-	.produto img {
-		padding-top: 15%;
-  	}
+.pai-produto {
+  display: flex;
+  justify-content: left;
 }
-@media (max-width: 992px) {
-	.produto img {
-		padding-top: 18%;
-  	}
-}
-@media (max-width: 768px) {
-	.produto img {
-		padding-top: 5%;
-  	}
-}
-@media (max-width: 576px) {
-	.produto img {
-		padding-top: 0;
-  	}
-	.produto .info h3 {
-		padding-top: 10%;
-  	}
+.filho-produto {
+  align-self: center;
 }
 
 /*Estilo da seção SOBRE*/
-
 .sobre .container {
 	padding: 20px 40px;
 	background-color: #d4dbe3;
 }
-.title-sobre{
+.title-sobre {
 	text-align: center;
 	text-transform: uppercase;
 	padding-bottom: 10px;
