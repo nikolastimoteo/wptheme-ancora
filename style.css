@@ -86,7 +86,6 @@ body {
 	padding-bottom: 10px;
 	color: #d4dbe3;
 	border-bottom: 4px dashed #d78442;
-	opacity: 1;
 }
 .produtos {
 	background: url(assets/images/background_produtos.jpg);
@@ -95,8 +94,7 @@ body {
 	color: #d4dbe3;
 }
 .produtos .container {
-	background-color: #09365b;
-	opacity: 0.9;
+	background-color: rgba(9, 54, 91, .9);
 	padding: 20px 40px;
 }
 .produto {
@@ -124,11 +122,11 @@ body {
   	filter: drop-shadow(2px 2px 5px #d4dbe3);
 }
 .pai-produto {
-  display: flex;
-  justify-content: left;
+  	display: flex;
+  	justify-content: left;
 }
 .filho-produto {
-  align-self: center;
+  	align-self: center;
 }
 
 /*Estilo da seção SOBRE*/
@@ -142,7 +140,6 @@ body {
 	padding-bottom: 10px;
 	color: #09365b;
 	border-bottom: 4px dashed #961811;
-	opacity: 1;
 }
 .sobre p {
 	color: #09365b;
@@ -177,7 +174,6 @@ body {
 	padding-bottom: 10px;
 	color: #09365b;
 	border-bottom: 4px dashed #961811;
-	opacity: 1;
 }
 .clientes img {
 	max-height: 250px;
@@ -187,4 +183,49 @@ body {
 	opacity: .6;
 	-webkit-filter: drop-shadow(3px 3px 5px #222);
   	filter: drop-shadow(3px 3px 5px #222);
+}
+
+/*Estilo da seção LIVRO DE RECEITAS*/
+.title-receitas {
+	text-align: center;
+	padding-bottom: 10px;
+	color: #d4dbe3;
+	border-bottom: 4px dashed #d78442;
+}
+.receitas {
+	background: url(assets/images/background_receitas.jpg);
+	background-size: cover;
+	background-position: center;
+	color: #d4dbe3;
+}
+.receitas .container {
+	background-color: rgba(9, 54, 91, .9);
+	padding: 20px 40px;
+}
+.receita {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.receitas a {
+	color: #d4dbe3;
+	opacity: .8;
+}
+.receitas a:hover {
+	text-decoration: none;
+	opacity: 1;
+}
+.receitas h3{
+	padding-top: 5px;
+}
+.todas-receitas {
+	border: 1px solid #d78442;
+	padding: 8px 20px;
+	color: #d4dbe3;
+	text-transform: uppercase;
+	display: inline-block;
+}
+.todas-receitas:hover {
+	text-decoration: none;
+	color: #d78442;
+	border: 1px solid #d4dbe3;
 }

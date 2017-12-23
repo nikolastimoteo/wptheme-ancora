@@ -108,4 +108,29 @@
 	</div>
 </div>
 <!-- Fim CLIENTES -->
+
+<!-- Início LIVRO DE RECEITAS/BLOG -->
+<div class="receitas">
+	<div class="container">
+		<h2 class="title-receitas">LIVRO DE RECEITAS</h2>
+		<div class="row">
+			<?php 
+				$args = array('post_type'=>'post', 'showposts'=>3);
+				$minhas_receitas = get_posts( $args );
+				if($minhas_receitas) : foreach($minhas_receitas as $post) : setup_postdata( $post );
+			?>
+				<div class="col-lg-4 col-md-4 receita">
+					<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(false, array('class'=>'img-fluid')); ?>
+					<h3><?php the_title(); ?></h3></a>
+					<?php the_excerpt(); ?>
+				</div>
+			<?php
+		    	endforeach;
+		    	endif;
+	     	?>
+	     	<div class="col-12 pai"><div class="filho"><a class="todas-receitas" href="">TODAS AS RECEITAS</a></div></div>
+		</div>
+	</div>
+</div>
+<!-- Fim LIVRO DE RECEITAS/BLOG -->
 <?php get_footer(); ?>
