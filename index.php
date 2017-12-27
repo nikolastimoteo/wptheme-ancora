@@ -9,7 +9,7 @@
 <!-- Fim BANNER -->
 
 <!-- Início SOBRE -->
-<div class="sobre">
+<div class="sobre" id="sobre">
 	<div class="container">
 		<div class="row">
 			<?php 
@@ -39,7 +39,7 @@
 <!-- Fim SOBRE -->
 
 <!-- Início PRODUTOS -->
-<div class="produtos">
+<div class="produtos" id="produtos">
 	<div class="container">
 		<h2 class="title-produtos">PRODUTOS</h2>
 		<div class="row">
@@ -73,7 +73,7 @@
 <!-- Fim PRODUTOS -->
 
 <!-- Início CLIENTES -->
-<div class="clientes">
+<div class="clientes" id="clientes">
 	<div class="container">
 		<h2 class="title-clientes">CLIENTES</h2>
 		<div class="row">
@@ -97,7 +97,7 @@
 <!-- Fim CLIENTES -->
 
 <!-- Início LIVRO DE RECEITAS/BLOG -->
-<div class="receitas">
+<div class="receitas" id="receitas">
 	<div class="container">
 		<h2 class="title-receitas">LIVRO DE RECEITAS</h2>
 		<div class="row">
@@ -126,26 +126,26 @@
 <!-- Fim LIVRO DE RECEITAS/BLOG -->
 
 <!-- Início CONTATO -->
-<div class="contato">
+<div class="contato" id="contato">
 	<div class="container">
 		<h2 class="title-contato">CONTATO</h2>
 		<div class="row">
 			<?php
 				if ( $_SERVER['REQUEST_METHOD'] == "POST" ) {
 					if (enviaEmail()) { ?>
-						<div class="col-12 alerta sucesso">
-							<h3>Mensagem Enviada!</h3>
+						<div class="col-12">
+							<h4 class="alerta sucesso">Mensagem Enviada!</h4>
 						</div>
 					<?php
 					} else { ?>
-						<div class=" col-12 alerta falha">
-							<h3>Não foi possivel enviar sua mensagem. Por favor, tente novamente.</h3>
+						<div class="col-12">
+							<h4 class="alerta falha">Não foi possivel enviar sua mensagem. Por favor, tente novamente.</h4>
 						</div>
 					<?php
 					}
 				} ?>
 				<div class="col-12">
-					<form class="form-horizontal" method="post" action=".">
+					<form class="form-horizontal" method="post" action=".#contato">
 		            	<fieldset>
 		                	<label class="control-label label-text" for="inputNome">Nome</label>
 		                    <input type="text" class="form-control input-custom" name="nome" id="inputNome" placeholder="" required>

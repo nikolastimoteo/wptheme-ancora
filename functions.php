@@ -129,3 +129,34 @@ function enviaEmail(){
   $status = wp_mail($to, $subject, $content, $headers);
   return $status;
 }
+
+/**************************************
+ * Registro de widgets do footer
+ **************************************/
+function register_widgets() {
+    register_sidebar( array(
+        'name' => 'Descrição Footer',
+        'id' => 'descricao-footer',
+        'before_widget' => '<div class="col-md-4 col-lg-4 pai"><div class="filho">',
+        'after_widget' => '</div></div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>',
+    ));
+    register_sidebar( array(
+        'name' => 'Endereço Footer',
+        'id' => 'endereco-footer',
+        'before_widget' => '<div class="col-md-4 col-lg-4 pai"><div class="filho">',
+        'after_widget' => '</div></div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>',
+    ));
+    register_sidebar( array(
+        'name' => 'Logo Footer',
+        'id' => 'logo-footer',
+        'before_widget' => '<div class="col-md-4 col-lg-4 pai"><div class="filho">',
+        'after_widget' => '</div></div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>',
+    ));
+}
+add_action( 'widgets_init', 'register_widgets' );
