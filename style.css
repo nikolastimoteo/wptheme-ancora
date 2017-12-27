@@ -229,3 +229,35 @@ body {
 	color: #d78442;
 	border: 1px solid #d4dbe3;
 }
+
+/*Estilo da seção CONTATO*/
+.contato .container {
+	padding: 20px 40px;
+	background-color: #d4dbe3;
+	color: #09365b;
+}
+.title-contato {
+	text-align: center;
+	padding-bottom: 10px;
+	border-bottom: 4px dashed #961811;
+}
+.enviar {
+	background: none;
+	border: 1px solid #961811;
+	padding: 8px 20px;
+	color: #09365b;
+	text-transform: uppercase;
+	display: inline-block;
+}
+.enviar:hover {
+	text-decoration: none;
+	color: #961811;
+	border: 1px solid #09365b;
+}
+.contato input, #inputMensagem {
+	margin-bottom: 15px;
+	border-radius: 0;
+}
+.contato label {
+	margin-bottom: 0;
+}

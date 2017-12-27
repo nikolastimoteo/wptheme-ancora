@@ -24,6 +24,7 @@ register_nav_menus( array(
  **************************************/
 function wp_responsivo_scripts() {
   // Carregando CSS header
+  wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/assets/css/fontawesome-all.css' );
   wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css' );
   wp_enqueue_style( 'style', get_stylesheet_uri() );
   
@@ -113,4 +114,18 @@ function register_post_clientes() {
  
   register_post_type( 'clientes' , $args );
   flush_rewrite_rules();
+}
+
+/**************************************
+ * Envia email de contato
+ **************************************/
+function enviaEmail(){
+  $to = get_option('admin_email');
+  $subject = "Mensagem do Site Âncora Pescados Congelados";
+  $content = "De: ".$_POST['nome'].". Mensagem: ".$_POST['mensagem'];
+  $headers = array(
+    'Reply-To' => $_POST['email']
+  );
+  $status = wp_mail($to, $subject, $content, $headers);
+  return $status;
 }

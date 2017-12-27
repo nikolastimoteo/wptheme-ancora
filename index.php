@@ -1,18 +1,5 @@
 <?php get_header(); ?>
 
-<!--<div class="slider">
-	<div id="carouselExampleSlidesOnly" class="carousel carousel-custom">
-	  <div class="carousel-inner">
-	    <div class="carousel-item active pai">
-	      <img class="d-block w-100" src="<?php bloginfo('template_directory');?>/assets/images/slider-01.jpg" alt="Backgroud Docas">
-		  <div class="carousel-caption filho">
-		    <img class="d-block w-custom" src="<?php bloginfo('template_directory');?>/assets/images/logo.png" alt="Logo da Empresa">
-		  </div>
-	    </div>
-	  </div>
-	</div>
-</div>-->
-
 <!-- Início BANNER -->
 <div class="banner pai">
 	<div class="filho">
@@ -128,9 +115,54 @@
 		    	endforeach;
 		    	endif;
 	     	?>
-	     	<div class="col-12 pai"><div class="filho"><a class="todas-receitas" href="">TODAS AS RECEITAS</a></div></div>
+	     	<div class="col-12 pai">
+	     		<div class="filho">
+	     			<a class="todas-receitas" href="">TODAS AS RECEITAS</a>
+	     		</div>
+	     	</div>
 		</div>
 	</div>
 </div>
 <!-- Fim LIVRO DE RECEITAS/BLOG -->
+
+<!-- Início CONTATO -->
+<div class="contato">
+	<div class="container">
+		<h2 class="title-contato">CONTATO</h2>
+		<div class="row">
+			<?php
+				if ( $_SERVER['REQUEST_METHOD'] == "POST" ) {
+					if (enviaEmail()) { ?>
+						<div class="col-12 alerta sucesso">
+							<h3>Mensagem Enviada!</h3>
+						</div>
+					<?php
+					} else { ?>
+						<div class=" col-12 alerta falha">
+							<h3>Não foi possivel enviar sua mensagem. Por favor, tente novamente.</h3>
+						</div>
+					<?php
+					}
+				} ?>
+				<div class="col-12">
+					<form class="form-horizontal" method="post" action=".">
+		            	<fieldset>
+		                	<label class="control-label label-text" for="inputNome">Nome</label>
+		                    <input type="text" class="form-control input-custom" name="nome" id="inputNome" placeholder="" required>
+
+			                <label class="control-label label-text" for="inputEmail">E-mail</label>
+			                <input type="text" class="form-control input-custom" name="email" id="inputEmail" placeholder="" required>
+
+			                <label class="control-label label-text" for="inputMensagem">Mensagem</label>
+			                <textarea type="text" class="form-control input-custom" name="mensagem" rows="8" id="inputMensagem" placeholder="" required></textarea>
+			                
+			                <input class="enviar form-control input-custom" type="submit" name="submit"/>
+			            </fieldset>
+		            </form>
+	        	</div>
+		</div>
+	</div>
+</div>
+<!-- Fim CONTATO -->
+
 <?php get_footer(); ?>
