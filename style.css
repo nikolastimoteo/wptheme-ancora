@@ -35,35 +35,10 @@ body {
 	background-position: center; 
 }
 
-/*Tira o padding do Jumbotron para a imagem ocupar ele todo*/
-/*.jumbotron-custom {
-	padding-top: 0;
-	padding-left: 0;
-	padding-right: 0;
-	padding-bottom: 0;
-}*/
-
 /*Tira a margem inferior do h2 e dos h4 dentro da .navbar-brand*/
 .navbar-brand h2, h4 {
 	margin-bottom: 0;
 }
-
-/*Altera o padding do carousel iniciando-o logo
- *após a navbar
- */
-/*.carousel-custom {
-    padding-top: 64px;
-}*/
-
-/*Para que a imagem continue aparecendo mesmo em telas
- *menores, retira o padding de baixo e coloca a posição
- *bottom em 15px
- */
-/*.d-md-block-custom {
-	padding-bottom: 0;
-	bottom: 15px;
-    display: block!important;
-}*/
 
 /*Pega 70% do espaço da div para a logo e a centraliza
  *horizontalmente
@@ -288,6 +263,38 @@ body {
   text-align: center;
 }
 
+/*Estilo do paginas internas*/
+.banner-internas {
+	background: url(assets/images/background_internas.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 200px;
+	padding-top: 64px;
+}
+.banner-internas-sobreposicao {
+	background-color: rgba(215, 132, 66, .5);
+	height: 136px;
+	padding-top: 45px;
+}
+.banner-internas h2 {
+	color: #09365b;
+	text-transform: uppercase;
+	font-family: 'Gaspar Regular';
+	font-weight: bold;
+
+}
+.banner-internas #crumbs{
+	color: #09365b;
+	text-align: right;
+}
+.banner-internas #crumbs a{
+	color: #d4dbe3;
+}
+.conteudo {
+	padding: 40px 0;
+	background-color: #d4dbe3;
+	color: #09365b;
+}
 /*Estilo do footer*/
 .footer {
 	background: url(assets/images/background_footer.jpg);
